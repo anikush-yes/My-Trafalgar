@@ -410,7 +410,7 @@ h3 {
     font-size: 18px;
     color: #458FF6;
     cursor: pointer;
-    
+
 
 }
 
@@ -432,11 +432,13 @@ h3 {
     align-items: center;
     margin-top: 200px;
     padding: 50px;
+    position: relative;
 }
 
 .blueCardHeader {
 
     margin-top: 30px;
+    
 }
 
 .blueCardHeader h2 img {
@@ -456,8 +458,20 @@ h3 {
 
 .imgDots {
     position: absolute;
-    margin-right: 980px
+    margin-right: 965px;
+    bottom: 110px;
+
+
 }
+
+.blueCardRightDots {
+    position: absolute;
+    top: -15px;
+    right: -48px;
+
+
+}
+
 
 .blueCardHeader img {
 
@@ -468,33 +482,22 @@ h3 {
 .blueCardCustomerAreSaying {
     background-image: url(images/blueCard.svg);
     width: 920px;
-    height: 300px;
-    border-radius: 50px;
+    height: 350px;
+    border-radius: 20px;
     color: white;
     margin-bottom: 30px;
-    margin-right: 80px;
-    position: absolute;
+    margin-right: 70px;
+    position: relative;
+    overflow: hidden;
 
 }
 
-.blueCardCustomerAreSaying .blueCardRightDots {
 
-    position: absolute;
-    margin-left: 820px;
-    margin-bottom: 80px;
-    /* background-color: transparent; */
+.person h3 {
 
-
-
+    padding: 0;
 }
 
-.whatCustomersAreSaying .blueCardCustomerAreSaying .dotsCustomerRewleft {
-
-    margin-left: 820px;
-    margin-bottom: 100px;
-    position: absolute;
-
-}
 
 .person {
     display: flex;
@@ -504,23 +507,47 @@ h3 {
     gap: 40px;
     margin-top: 30px;
 
+
 }
 
-.whatCustomersAreSaying .arrow {
+.whatCustomersAreSaying .slider_nav {
 
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    margin-top: 250px;
+    margin-top: 450px;
     margin-left: 280px;
 
 }
 
+.dot {
+
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #5A98F2;
+    margin: 0 15px;
+    display: inline-block;
+    cursor: pointer;
+
+}
+
+.prev {
+
+    rotate: 180dg;
+
+}
+
+
+
+
+
+
 .lastArticle {
 
     width: 100%;
-    margin-top: 200px;
+    margin-top: 300px;
 
 }
 
@@ -609,9 +636,9 @@ h3 {
 
 
 .lastArticleButtonCenter {
-display: flex;
-justify-content: center;
-align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -626,7 +653,7 @@ align-items: center;
     background-color: transparent;
     font-size: 18px;
     color: #458FF6;
-    
+
 
 }
 
@@ -734,7 +761,6 @@ footer {
     line-height: 60px;
     display: flex;
     padding-left: 0
-  
 }
 
 .footer-list ul {
