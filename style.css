@@ -81,7 +81,7 @@ header {
 
 .textBox {
 
-    margin-left: 400px;
+    margin-left: 200px;
     width: 500px;
     display: flex;
     justify-content: center;
@@ -107,7 +107,7 @@ header {
 
 }
 
-.txtBoxHeaderBth {
+.txtBoxHeaderBtn {
 
     width: 200px;
     height: 70px;
@@ -119,7 +119,7 @@ header {
     margin-right: 300px;
 }
 
-.txtBoxHeaderBth:hover {
+.txtBoxHeaderBtn:hover {
 
     background-color: white;
     color: #458FF6;
@@ -130,17 +130,13 @@ header {
 .headerSecondPart {
     width: 100%;
     margin-top: 150px;
-    gap: 100px;
+    gap: 90px;
     display: flex;
     /* justify-content: space-between; */
 
 }
 
-.imgContainer {
 
-    width: 50%;
-    margin-left: 300px;
-}
 
 hr {
     background-color: black;
@@ -438,7 +434,7 @@ h3 {
 .blueCardHeader {
 
     margin-top: 30px;
-    
+
 }
 
 .blueCardHeader h2 img {
@@ -489,6 +485,7 @@ h3 {
     margin-right: 70px;
     position: relative;
     overflow: hidden;
+    padding: 20px;
 
 }
 
@@ -498,6 +495,10 @@ h3 {
     padding: 0;
 }
 
+.slider_nav {
+
+    position: relative;
+}
 
 .person {
     display: flex;
@@ -506,8 +507,15 @@ h3 {
     flex-direction: row;
     gap: 40px;
     margin-top: 30px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.6s ease;
 
+}
 
+.person.active {
+    opacity: 1;
+    transition: opacity 0.6s ease;
 }
 
 .whatCustomersAreSaying .slider_nav {
@@ -517,26 +525,57 @@ h3 {
     align-items: center;
     position: absolute;
     margin-top: 450px;
-    margin-left: 280px;
 
 }
 
 .dot {
-
+    display: inline-block;
     width: 10px;
     height: 10px;
+    margin: 0 5px;
+    background-color: #ddd;
+    /* Pilka spalva pradiniam taškui */
     border-radius: 50%;
-    background-color: #5A98F2;
-    margin: 0 15px;
-    display: inline-block;
-    cursor: pointer;
+    transition: all 0.6s ease;
+    /* Sklandus perėjimas */
+}
 
+.dot.active {
+    background-color: #33aaff;
+    /* Aktyvus taškas - raudona */
+    transform: scale(1.5);
+    /* Padidina aktyvų tašką */
+}
+
+.dot.inactive {
+    background-color: #aaa;
+    /* Neaktyvus taškas - šviesiai pilka */
+    transform: scale(1);
+    /* Normalus dydis */
+}
+
+.next {
+
+    margin-left: 100px;
+    cursor: pointer;
+    transition: transform 0.6s ease, color 0.3s ease;
 }
 
 .prev {
+    margin-right: 90px;
+    cursor: pointer;
+    transition: transform 0.6s ease, color 0.3s ease;
+    rotate: 180deg;
+}
 
-    rotate: 180dg;
+.next:hover {
+    transform: scale(1.2);
 
+}
+
+.prev:hover {
+    transform: scale(1.2);
+    color: #33aaff;
 }
 
 
@@ -547,14 +586,17 @@ h3 {
 .lastArticle {
 
     width: 100%;
-    margin-top: 300px;
+    margin-top: 100px;
+    position: relative;
+
 
 }
 
 .cardsLastArticleCntrs {
 
     width: 100%;
-    padding: 80px;
+    padding: 100px;
+
 
 
 }
@@ -567,25 +609,25 @@ h3 {
     align-items: center;
     flex-direction: column;
     gap: 30px;
-    margin-right: 100px;
+   
+
 
 }
 
-.cntrOfLastArticle {
 
-    width: 250px;
-}
 
 
 
 .cardsLastArticleCntrs {
-    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: row;
     margin-top: 30px;
     border-radius: 50px;
     position: relative;
+
+
 
 
 }
@@ -601,7 +643,7 @@ h3 {
     border: 1px solid rgb(252, 247, 247);
     border-radius: 50px;
     box-shadow: 10px 40px 50px 0px #E5E9F666;
-    background-color: white;
+
 }
 
 
@@ -667,23 +709,24 @@ h3 {
 
 
 
-.lastArticle .lastArticleDotsLeft {
+.lastArticleDotsLeft {
 
     position: absolute;
-    width: 100%;
-    margin-left: 1100px;
-    margin-bottom: 500px;
+    margin-left: 300px;
+    margin-top: 155px;
+
+
+
 
 
 
 }
 
-.lastArticle .cardsLastArticleCntrs .waveRight {
+.waveRight {
+
+
     position: absolute;
-    display: flex;
-    width: 100%;
-    justify-content: end;
-    align-items: end;
+    margin-left: 1356px;
 
 }
 
